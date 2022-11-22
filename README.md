@@ -25,6 +25,8 @@ A full-stack expense tracker app builds in the front-end with React using hooks 
     └── db.js
 └── controllers/
     └── transactions.js
+└── models/
+    └── Transaction.js
 └── routes/
     └── transactions.js
 └── server.js
