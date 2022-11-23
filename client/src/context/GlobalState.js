@@ -5,6 +5,8 @@ import axios from 'axios';
 // Initial State
 const initialState = {
   transactions: [],
+  error: null,
+  loading: true,
 };
 
 // Create context
@@ -23,7 +25,12 @@ export const GlobalProvider = ({ children }) => {
         type: 'GET_TRANSACTIONS',
         payload: res.data.data,
       });
-    } catch (error) {}
+    } catch (error) {
+      dispatch({
+        type: 'TRANSACTION_ERROR',
+        payload: error.response.data.error,
+      });
+    }
   }
 
   function deleteTransaction(id) {
