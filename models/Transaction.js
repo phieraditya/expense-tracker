@@ -8,7 +8,7 @@ const TransactionSchema = new mongoose.Schema({
   },
   amount: {
     type: Number,
-    required: [true, 'Please add a positive oor negative number'],
+    required: [true, 'Please add a positive or negative number'],
   },
   createdAt: {
     type: Date,
