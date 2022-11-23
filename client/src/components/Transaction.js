@@ -10,7 +10,7 @@ const Transaction = ({ transaction }) => {
     <li className={transaction.amount > 0 ? 'plus' : 'minus'}>
       {transaction.text}{' '}
       <span>
-        {sign}Rp {Math.abs(transaction.amount)}
+        {sign}Rp {Math.abs(transaction.amount).toLocaleString()}
       </span>
       <button
         className="delete-btn"
