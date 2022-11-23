@@ -33,7 +33,21 @@ exports.addTransaction = async (req, res, next) => {
       success: true,
       data: transaction,
     });
-  } catch (error) {}
+  } catch (error) {
+    if (error.name === 'ValidationError') {
+      const messages = Object.values(error.errors).map((val) => val.message);
+
+      return res.status(400).json({
+        success: false,
+        error: messages,
+      });
+    } else {
+      return res.status(500).json({
+        success: false,
+        error: 'Server Error',
+      });
+    }
+  }
 };
 
 // @desc    Delete transaction
