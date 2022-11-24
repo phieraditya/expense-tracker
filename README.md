@@ -1,6 +1,6 @@
 # Expense Tracker
 
-A full-stack expense tracker app builds in the front-end with React using hooks (useState, useContext, useReducer) and the Context API, and in the back-end with Node.js and Express API.
+A full-stack expense tracker app builds in the front-end with React using hooks (useState, useContext, useReducer) and the Context API, and in the back-end with MongoDB, Mongoose ODM, Node.js and Express API.
 
 ## File and Folder Structure
 
